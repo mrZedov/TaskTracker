@@ -57,7 +57,7 @@
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Удаление задачи</span></span></h3>
 <p><span style="font-weight: 400;">Id удаляемого пользователя передается параметром в строке запроса</span></p>
 <p style="padding-left: 30px;"><span style="font-weight: 400;">DELETE http://localhost:3000/tasks/delete/:id</span></h3>
-<h3 style="padding-left: 60px;"><span style="font-weight: 400;">http://localhost:3000/tasks/delete/16</span></h3>
+<p style="padding-left: 60px;"><span style="font-weight: 400;">http://localhost:3000/tasks/delete/16</span></h3>
 <h3>&nbsp;</h3>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Изменить пользователя на которого назначена задача</span></span></h3>
 <p style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/assignUser</span></h3>
