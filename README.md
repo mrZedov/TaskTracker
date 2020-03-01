@@ -31,7 +31,8 @@
 <p><br /><br /></p>
 <h2><strong>Работа с задачами:</strong></h2>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Создание задачи</span></span></h3>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">POST http://localhost:3000/tasks/add</span></h3>
+
+<p style="padding-left: 30px;"><span style="font-weight: 400;">POST http://localhost:3000/tasks/add</span></h3>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">{</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"title": "Title task",</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"description": "Description task",</span></p>
@@ -39,7 +40,7 @@
 <p style="padding-left: 60px;"><span style="font-weight: 400;">}</span></p>
 <p style="padding-left: 60px;">&nbsp;</p>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Редактирование задачи</span></span></h3>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/edit</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/edit</span></h3>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">{</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"id": 16,</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"title": "New title task",</span></p>
@@ -47,7 +48,7 @@
 <p style="padding-left: 60px;"><span style="font-weight: 400;">}</span></p>
 <p>&nbsp;</p>
 <p><span style="text-decoration: underline;"><span style="font-weight: 400;">Изменить статус задачи</span></span></p>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/setStatus</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/setStatus</span></h3>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">{</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"id": 16,</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"newStatus": "View"</span></p>
@@ -55,11 +56,11 @@
 <p>&nbsp;</p>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Удаление задачи</span></span></h3>
 <p><span style="font-weight: 400;">Id удаляемого пользователя передается параметром в строке запроса</span></p>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">DELETE http://localhost:3000/tasks/delete/:id</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">DELETE http://localhost:3000/tasks/delete/:id</span></h3>
 <h3 style="padding-left: 60px;"><span style="font-weight: 400;">http://localhost:3000/tasks/delete/16</span></h3>
 <h3>&nbsp;</h3>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Изменить пользователя на которого назначена задача</span></span></h3>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/assignUser</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">PUT http://localhost:3000/tasks/assignUser</span></h3>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">{</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"id": 17,</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"newUserId": 2</span></p>
@@ -67,16 +68,16 @@
 <p>&nbsp;</p>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Получение списка задач (с назначенными пользователями)</span></span></h3>
 <p><span style="font-weight: 400;">В результате запроса будет json со списком всех задач и пользователями под каждую задачу</span></p>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/getAll</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/getAll</span></h3>
 <p>&nbsp;</p>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Отфильтровав по status</span></span></h3>
 <p><span style="font-weight: 400;">В результате запроса будет json со списком всех задач и пользователями под каждую задачу с отбором по статусу задачи из параметра запроса</span></p>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/filterByStatus</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/filterByStatus</span></h3>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">{</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">"status": "In Progress"</span></p>
 <p style="padding-left: 60px;"><span style="font-weight: 400;">}</span></p>
 <p>&nbsp;</p>
 <h3><span style="text-decoration: underline;"><span style="font-weight: 400;">Отсортировав по id (по убыванию)</span></span></h3>
 <p><span style="font-weight: 400;">В результате запроса будет json со списком всех задач и пользователями под каждую задачу с сортировкой по ID по убыванию</span></p>
-<h3 style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/getOrderByID</span></h3>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">GET http://localhost:3000/tasks/getOrderByID</span></h3>
 <p>&nbsp;</p>
